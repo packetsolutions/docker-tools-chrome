@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y curl \
  && rm -rf /var/lib/apt/lists/* \
  && useradd chrome \
  && mkdir -p /home/chrome \
+ && mkdir -p /home/chrome/.config \
+ && mkdir -p /home/chrome/.cache \
  && chown -R chrome:chrome /home/chrome
 USER chrome
 ENV HOME /home/chrome
