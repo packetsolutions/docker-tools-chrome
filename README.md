@@ -42,6 +42,7 @@ sudo chown -R 1000:1000 ~/dockerchrome
 
 Full runboook
 ```
+mkdir ~/dockerchrome
 mkdir ~/dockerchrome/downloads
 mkdir ~/dockerchrome/settings
 mkdir ~/dockerchrome/cache
