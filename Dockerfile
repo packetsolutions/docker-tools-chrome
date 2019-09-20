@@ -5,10 +5,10 @@ RUN apt-get update && apt-get install -y curl \
  && apt-get update && apt-get install -y google-chrome-stable \
  && rm -rf /var/lib/apt/lists/* \
  && useradd chrome \
- && mkdir -p /home/chrome \
- && mkdir -p /home/chrome/.config \
  && mkdir -p /home/chrome/.cache \
+ && mkdir -p /home/chrome/.config/google-chrome \
+ && touch /home/chrome/.config/google-chrome/First\ Run \
  && chown -R chrome:chrome /home/chrome
 USER chrome
 ENV HOME /home/chrome
-CMD [ "/usr/bin/google-chrome", "--no-sandbox" ]
+ENTRYPOINT [ "/usr/bin/google-chrome", "--no-sandbox" ]
